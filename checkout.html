@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Купить подписку — EchoCast</title>
+</head>
+<body>
+
+    <header>
+        <h1>EchoCast</h1>
+        <p>Каталог подкастов обо всём, что звучит в вашей голове</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="detail.html">О подкасте</a></li>
+                <li><a href="collection.html">Очередь прослушивания</a></li>
+                <li><a href="checkout.html">Купить подписку</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Подписка на дайджест</h2>
+        <p>Получайте подборку новых эпизодов по вашим интересам.</p>
+
+        <form action="/subscribe" method="POST">
+
+            <section>
+                <h3>Контактные данные</h3>
+
+                <p>
+                    <label for="subscriber-name">Ваше имя:</label><br>
+                    <input type="text" id="subscriber-name" name="subscriber_name"
+                           required minlength="2" maxlength="50"
+                           placeholder="Анна">
+                </p>
+
+                <p>
+                    <label for="email">Email для получения дайджеста:</label><br>
+                    <input type="email" id="email" name="email"
+                           required placeholder="you@example.com">
+                </p>
+
+                <p>
+                    <label for="start-date">С какой даты начать подписку:</label><br>
+                    <input type="date" id="start-date" name="start_date"
+                           required min="2024-01-01">
+                </p>
+            </section>
+
+            <section>
+                <h3>Частота получения дайджеста</h3>
+
+                <p>
+                    <input type="radio" id="freq-daily" name="frequency" value="daily" checked>
+                    <label for="freq-daily">Ежедневно</label>
+                </p>
+
+                <p>
+                    <input type="radio" id="freq-weekly" name="frequency" value="weekly">
+                    <label for="freq-weekly">Раз в неделю</label>
+                </p>
+            </section>
+
+            <section>
+                <h3>Категории интересов</h3>
+                <p>Отметьте все, что вам интересно:</p>
+
+                <p>
+                    <input type="checkbox" id="cat-admission" name="categories" value="admission">
+                    <label for="cat-admission">Поступление и учёба</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="cat-cats" name="categories" value="cats">
+                    <label for="cat-cats">Котики и питомцы</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="cat-sky" name="categories" value="sky">
+                    <label for="cat-sky">Рассветы и закаты</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="cat-groceries" name="categories" value="groceries">
+                    <label for="cat-groceries">Закупки в магазине</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="cat-pyro" name="categories" value="pyro">
+                    <label for="cat-pyro">Разбор творчества Пирокинезиса</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="cat-tiktok" name="categories" value="tiktok">
+                    <label for="cat-tiktok">TikTok и алгоритмы</label>
+                </p>
+            </section>
+
+            <section>
+                <h3>Дополнительно</h3>
+
+                <p>
+                    <label for="digest-size">Максимум эпизодов в дайджесте:</label><br>
+                    <input type="number" id="digest-size" name="digest_size"
+                           min="1" max="20" value="5" required>
+                </p>
+
+                <p>
+                    <label for="comment">Комментарий:</label><br>
+                    <textarea id="comment" name="comment" rows="4" cols="40"
+                              maxlength="500"
+                              placeholder="Например: хочу больше эпизодов про Пирокинезиса и котиков"></textarea>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">Я согласен с обработкой персональных данных и получением писем</label>
+                </p>
+            </section>
+
+            <p>
+                <button type="submit">Подписаться на дайджест</button>
+            </p>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 EchoCast. Все права защищены.</p>
+        <p>Связь: <a href="mailto:hello@echocast.example">hello@echocast.example</a></p>
+    </footer>
+
+</body>
+</html>
